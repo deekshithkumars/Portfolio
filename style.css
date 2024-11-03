@@ -1,0 +1,479 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Dark Mode Styles */
+
+.fa-moon{
+    font-size: 1.5rem;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+.navbar.dark-mode {
+    background-color: #333;
+  } */
+  
+.container.dark-mode {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+  } 
+
+  .dark-mode .navbar{
+    background-color: #90AEAD;
+    color: #121212;
+}
+
+.dark-mode .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3d3f3f;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.dark-mode .nav-link:hover::after {
+    width: 100%;
+}
+
+.dark-mode #name{
+    color: black;
+}
+
+.dark-mode .navbar-collapse{
+    background-color: #90AEAD;
+    color: #121212;
+}
+
+/* header */
+
+.navbar {
+    height: 4rem;
+    background-color: white;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+#name{
+    color: #90AEAD;
+}
+
+.navbar-nav #name {
+    margin-left: 6rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    transition: font-size 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav a {
+    margin-right: 1.5rem;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px; /* Increased padding for better click area */
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #90AEAD;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .navbar-nav #name {
+        margin-left: 0rem;  /*Reduced margin for smaller screens */
+        font-size: 1rem;  /* Decreased font size on mobile */
+   } 
+
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the start */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+    }
+
+    .navbar-nav a {
+        margin-right: 0; /* Remove margin for links in mobile view */
+        margin-bottom: 0.5rem; /* Add space between links */
+        width: 100%; /* Full width on mobile */
+        text-align: center; /* Center text */
+    }
+
+    .navbar-collapse {
+        margin-top: 1rem;
+        background-color: white;
+    }
+
+
+}
+
+/* footer */
+
+.f-info-social i{
+    font-size: 1.2rem;
+    margin-left: 0.6rem;
+}
+
+.f-info-social,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info{
+    padding: 0.3rem;
+    background-color: #90AEAD;
+    color: #222222;
+    display: flex;
+    height: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.f-info a{
+    color: #222222;
+}
+
+/* home */
+
+#Home {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+    gap: 20px; 
+}
+
+#Home img {
+    max-width: 100%; 
+    height: 150%;
+    border-radius: 10px;
+}
+
+#Home div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #90AEAD;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #a1cac9;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+  /* About */
+
+  #About {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+}
+
+#About img {
+    max-width: 70%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+#About div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+   
+
+    #Home, #About {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        padding: 15px;
+    }
+
+    #Home img, #About img {
+        max-width: 90%; /* Use more screen width on mobile */
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Home img, #About img {
+        max-width: 100%; /* Utilize full screen width */
+    }
+
+    .download-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+/* Service Section Styles */
+#Service {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+}
+
+#Service img {
+    max-width: 70%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+#Service div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+#Service h1 {
+    margin-bottom: 1rem;
+}
+
+#Service h2 {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Service h2 i {
+    margin-right: 8px;
+}
+
+#Service p {
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%; 
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #Service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #Service div {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #Service h1 {
+        font-size: 2rem;
+    }
+
+    #Service h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* My work - cards */
+
+#Portfolio{
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.card-hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.card-hover-content p{
+    padding: 5px;
+    color: white;
+    opacity: 0.9;
+}
+
+.card:hover .card-hover-content {
+    opacity: 1;
+}
+
+
+
+.card-hover-content a {
+    color: white;
+    text-decoration: none;
+    background-color: #90AEAD;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-hover-content a:hover {
+    background-color: #badcdb;
+}
+
+@media (max-width: 768px) {
+    #Portfolio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
+}
+
+
+
+/* contact */
+
+#Contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+
+#Contact .btn-send {
+    background-color:#90AEAD;
+    color: #fff;
+}
+
+#Contact .btn-send:hover {
+    background-color: #badcdb;
+}
+
+.success, .error {
+    display: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+    #Contact {
+        padding: 20px;
+        margin: 30px 15px;
+        font-size: 16px; /* Slightly smaller text on tablets */
+    }
+
+    #Contact .btn-send {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Contact {
+        margin: 20px 10px;
+        padding: 15px;
+        font-size: 14px; /* Smaller text for mobile screens */
+    }
+
+    .success, .error {
+        font-size: 12px; /* Adjust message text size */
+    }
+
+    #Contact .btn-send {
+        font-size: 12px; /* Smaller button text */
+        padding: 10px 0;
+    }
+}
