@@ -139,6 +139,8 @@ body.dark-mode {
 
 /* footer */
 
+
+
 .f-info-social i{
     font-size: 1.2rem;
     margin-left: 0.6rem;
@@ -169,7 +171,7 @@ body.dark-mode {
 /* home */
 
 #Home {
-    margin-top: 2rem;
+    /* margin-top: 0.5rem; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -179,8 +181,9 @@ body.dark-mode {
 }
 
 #Home img {
-    max-width: 100%; 
-    height: 150%;
+    margin-left: -18rem;
+    max-width: 130%; 
+    height: 180%;
     border-radius: 10px;
 }
 
@@ -210,6 +213,10 @@ body.dark-mode {
     margin-right: 8px;
 }
 
+.name{
+    margin-top: 1.5rem;
+}
+
   /* About */
 
   #About {
@@ -237,7 +244,7 @@ body.dark-mode {
 /* Mobile Styles */
 @media (max-width: 768px) {
 
-   
+
 
     #Home, #About {
         flex-direction: column; /* Stack elements vertically */
@@ -245,8 +252,10 @@ body.dark-mode {
         padding: 15px;
     }
 
+   
+
     #Home img, #About img {
-        max-width: 90%; /* Use more screen width on mobile */
+        max-width: 100%; /* Use more screen width on mobile */
     }
 
     .download-btn {
@@ -256,6 +265,23 @@ body.dark-mode {
 }
 
 @media (max-width: 480px) {
+
+    #Home img {
+        margin-left:-5.5rem;
+    }
+
+    /* #abt{
+        display: none;
+    }
+
+    #Home img{
+        display: none;
+    } */
+
+    /* #About{
+        margin-top: -7rem;
+    } */
+
     #Home img, #About img {
         max-width: 100%; /* Utilize full screen width */
     }
@@ -309,6 +335,14 @@ body.dark-mode {
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%; 
+}
+
+li{
+    text-align: left;
+}
+
+#Certificates h1{
+    text-align: center;
 }
 
 
